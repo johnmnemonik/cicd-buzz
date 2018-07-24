@@ -8,7 +8,7 @@ fi
 docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TAG .
 #docker tag 1915c636d784 kraus/cicd-buzz:latest
 docker tag $TRAVIS_REPO_SLUG $DOCKER_USER/$TRAVIS_REPO_SLUG:$TAG
-#docker login docker.io
+docker login docker.io
 docker push kraus/cicd-buzz:latest
 #docker tag $TRAVIS_REPO_SLUG $DOCKER_USER/$TRAVIS_REPO_SLUG:$TAG
 #docker push $TRAVIS_REPO_SLUG
