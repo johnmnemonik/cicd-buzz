@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM python:3.6
 RUN apk add --update python py-pip
 COPY requirements.txt /src/requirements.txt
 RUN pip install -r /src/requirements.txt
